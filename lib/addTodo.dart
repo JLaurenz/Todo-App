@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class addTodo extends StatefulWidget {
@@ -16,7 +18,7 @@ class _addTodoState extends State<addTodo> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text('Add todo'), 
+        const Text('Add todo'), 
         TextField(
           onSubmitted: (value) {
             if(newTodo.text.isNotEmpty){
@@ -26,7 +28,7 @@ class _addTodoState extends State<addTodo> {
           },
           autofocus: true, 
           controller: newTodo, 
-          decoration: InputDecoration(contentPadding: EdgeInsets.all(10), 
+          decoration: const InputDecoration(contentPadding: EdgeInsets.all(10), 
           labelText: 'TODO Title')),
         ElevatedButton(onPressed: (){
           if(newTodo.text.isNotEmpty){
@@ -34,7 +36,7 @@ class _addTodoState extends State<addTodo> {
           }
           newTodo.text = ''; 
           }, 
-          child: Text('Add Button'))
+          child: const Text('Add Button'))
       ],
     );
   }
